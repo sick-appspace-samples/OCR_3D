@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="OCR_3D">
+        <crown name="OCR_3D">
+            <desc>user script</desc>
+            <serves/>
+        </crown>
+        <meta key="author">AppSpace Sample</meta>
+        <meta key="version">1.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <entry path="pages" default="AppSpaceViewers-2.4.0.1.msdd">
+            <file type="application/zip">AppSpaceViewers-2.4.0.1.msdd</file>
+        </entry>
+        <entry path="resources">
+            <file type="application">image_34.json</file>
+            <file type="application">image_42.json</file>
+        </entry>
+        <entry path="scripts" default="main.lua">
+            <file type="text/x-lua">Decorations.lua</file>
+            <file type="text/x-lua">main.lua</file>
+            <file type="text/x-lua">OCRProcessing.lua</file>
+        </entry>
+    </application>
+</manifest>
