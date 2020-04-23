@@ -6,11 +6,13 @@ local function processOCR(hMap, iMap, object, viewer)
   -- Variables
   local rectangle, pixelRegion, pixelRegionOCR, imageBinarized, parameters, fontClassifier
 
+  local DELAY = 2000 -- ms between each type for demonstration purpose
+
   -- Visualize original image
   viewer:clear()
   local viewerID = viewer:addHeightmap({hMap, iMap}, deco.imDeco)
   viewer:present()
-  Script.sleep(2000)
+  Script.sleep(DELAY)
 
   if object == 'Black Plastic' then
     -- Create a rectangle
@@ -42,12 +44,12 @@ local function processOCR(hMap, iMap, object, viewer)
   -- Visualization of the rectangle
   viewer:addShape(rectangle, deco.planeDeco)
   viewer:present()
-  Script.sleep(2000)
+  Script.sleep(DELAY)
 
   -- Visualization of the pixel region containing the characters
   viewer:addPixelRegion(pixelRegionDilate, deco.decRegion, nil, viewerID) -- Add to 3D viewer
   viewer:present()
-  Script.sleep(2000)
+  Script.sleep(DELAY)
 
   -- Find blobs
   local blobs = pixelRegionDilate:findConnected(200)
@@ -60,7 +62,7 @@ local function processOCR(hMap, iMap, object, viewer)
   -- Classify the characters in the image
   local characters, _, _ = fontClassifier:classifyCharacters(blobs, imageInvert, parameters)
   print(characters)
-  Script.sleep(4000)
+  Script.sleep(DELAY*2)
 end
 
 -- Return scoped functions
