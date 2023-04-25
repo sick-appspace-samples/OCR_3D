@@ -1,11 +1,8 @@
 -- Decorations
-local decRegion = View.PixelRegionDecoration.create()
-decRegion:setColor(250, 0, 0, 100)
+local decRegion = View.PixelRegionDecoration.create():setColor(250, 0, 0, 100)
 
-local planeDeco = View.ShapeDecoration.create()
-planeDeco:setFillColor(0, 255, 255, 80)
-planeDeco:setLineColor(0, 255, 255)
-planeDeco:setLineWidth(3)
+local planeDeco = View.ShapeDecoration.create():setFillColor(0, 255, 255, 80)
+planeDeco:setLineColor(0, 255, 255):setLineWidth(3)
 
 -- Creating classifier and select font
 local fontClassifierPlastic = Image.OCR.Halcon.FontClassifier.create()
