@@ -3,11 +3,12 @@ local OCRProcessing = require('OCRProcessing')
 --Start of Global Scope---------------------------------------------------------
 print('AppEngine Version: ' .. Engine.getVersion())
 
-local viewer = View.create('viewer3D1') -- Will show in 3D viewer
+local viewer = View.create() -- Will show in 3D viewer
 
 --End of Global Scope-----------------------------------------------------------
 
 -- Start of Function and Event Scope--------------------------------------------
+
 local function main()
   viewer:clear()
 

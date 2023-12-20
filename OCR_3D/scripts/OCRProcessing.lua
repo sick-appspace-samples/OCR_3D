@@ -1,6 +1,8 @@
 local deco = require('Decorations')
 
---@processOCR(hMap: Image, iMap: Image, object: string)
+---@param hMap Image
+---@param iMap Image
+---@param object string
 local function processOCR(hMap, iMap, object, viewer)
 
   -- Variables
